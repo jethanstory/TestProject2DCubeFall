@@ -27,6 +27,7 @@ public class scr_movement : MonoBehaviour
         //transform.Translate(Input.GetAxis("Horizontal") * speed * Time.deltaTime, Input.GetAxis("Vertical") * speed * Time.deltaTime, 0f);
         transform.Translate(Input.GetAxis("Horizontal") * speed * Time.deltaTime, 0f, 0f);
         Debug.Log("Help");
+         
 
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
@@ -37,6 +38,8 @@ public class scr_movement : MonoBehaviour
         {
             transform.Translate(Input.GetAxis("Vertical") * speed * Time.deltaTime, 0f, 0f);
         }
+
+        
     }
     bool IsGrounded()
     {
