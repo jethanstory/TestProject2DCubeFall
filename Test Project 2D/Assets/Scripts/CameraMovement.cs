@@ -15,21 +15,17 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        OnBecameInvisible();
         float step = 1;
 
         var cameraPosition = Camera.main.gameObject.transform.position;
         cameraPosition.y += -step / 130;
         Camera.main.gameObject.transform.position = cameraPosition;
 
-        if (Camera.main.gameObject.transform.position.y < PlayerGameObject.transform.position.y)
+        if (camera1.transform.position.y < PlayerGameObject.transform.position.y + 100)
         {
             Application.Quit();
         }
     }
-    void OnBecameInvisible() {
-        //Destroy(PlayerGameObject);
-        Application.Quit();
-    }
+    
 
 }
