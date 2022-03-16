@@ -18,7 +18,7 @@ public class CameraMovement : MonoBehaviour
         float step = 1;
 
         var cameraPosition = Camera.main.gameObject.transform.position;
-        cameraPosition.y += -step / 120;
+        cameraPosition.y += -step / 50;
         Camera.main.gameObject.transform.position = cameraPosition;
 
         //if (camera1.transform.position.y > PlayerGameObject.transform.position.y + 100)
