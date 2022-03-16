@@ -22,12 +22,12 @@ public class scr_movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        OnBecameInvisible();
+        //OnBecameInvisible();
         rb = GetComponent<Rigidbody2D>();
         bc = GetComponent<BoxCollider2D>();
         //transform.Translate(Input.GetAxis("Horizontal") * speed * Time.deltaTime, Input.GetAxis("Vertical") * speed * Time.deltaTime, 0f);
         transform.Translate(Input.GetAxis("Horizontal") * speed * Time.deltaTime, 0f, 0f);
-        Debug.Log("Help");
+        //Debug.Log("Help");
          
 
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
@@ -58,8 +58,12 @@ public class scr_movement : MonoBehaviour
         RaycastHit2D ray = Physics2D.BoxCast(bc.bounds.center, bc.bounds.size, 0f, Vector2.left, 0.1f, platform);
         return ray.collider != null;
     }
+    
     void OnBecameInvisible() {
         //Destroy(PlayerGameObject);
         Application.Quit();
+        Debug.Log("He's done ya again");
+
     }
+    
 }
