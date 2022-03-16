@@ -32,10 +32,26 @@ public class scr_movement : MonoBehaviour
         {
             rb.velocity = Vector2.up * 5f;
         }
+
+        if (IsSidewaysRight() || IsSidewaysLeft())
+        {
+            transform.Translate(Input.GetAxis("Vertical") * speed * Time.deltaTime, 0f, 0f);
+        }
     }
     bool IsGrounded()
     {
         RaycastHit2D ray = Physics2D.BoxCast(bc.bounds.center, bc.bounds.size, 0f, Vector2.down, 0.1f, platform);
+        return ray.collider != null;
+    }
+
+    bool IsSidewaysRight()
+    {
+        RaycastHit2D ray = Physics2D.BoxCast(bc.bounds.center, bc.bounds.size, 0f, Vector2.right, 0.1f, platform);
+        return ray.collider != null;
+    }
+    bool IsSidewaysLeft()
+    {
+        RaycastHit2D ray = Physics2D.BoxCast(bc.bounds.center, bc.bounds.size, 0f, Vector2.left, 0.1f, platform);
         return ray.collider != null;
     }
 }
