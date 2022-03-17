@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class scr_movement : MonoBehaviour
 {
@@ -61,7 +62,8 @@ public class scr_movement : MonoBehaviour
     
     void OnBecameInvisible() {
         //Destroy(PlayerGameObject);
-        Application.Quit();
+        //Application.Quit();
+        SceneManager.LoadScene("GameOver");
         Debug.Log("He's done ya again");
 
     }
