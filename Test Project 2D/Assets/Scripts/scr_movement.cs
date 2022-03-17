@@ -33,7 +33,7 @@ public class scr_movement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
-            rb.velocity = Vector2.up * 5f;
+            rb.velocity = Vector2.up * 8f; //5f
         }
 
         if (IsSidewaysRight() || IsSidewaysLeft())
