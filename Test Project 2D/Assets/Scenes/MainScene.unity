@@ -1315,6 +1315,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerGameObject: {fileID: 214868988}
   camera1: {fileID: 519420031}
+  speed: 50
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
