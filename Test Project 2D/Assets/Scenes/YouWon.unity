@@ -396,7 +396,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 611044607}
         m_TargetAssemblyTypeName: GameOEvents, Assembly-CSharp
-        m_MethodName: ReplayGame
+        m_MethodName: nextLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -987,7 +987,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Restart
+  m_Text: Next
 --- !u!222 &2050941634
 CanvasRenderer:
   m_ObjectHideFlags: 0

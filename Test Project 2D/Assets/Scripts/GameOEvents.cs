@@ -24,6 +24,6 @@ public class GameOEvents : MonoBehaviour
     }
     public void nextLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name + 1);
+        SceneManager.LoadScene("Level_2");
     }
 }
