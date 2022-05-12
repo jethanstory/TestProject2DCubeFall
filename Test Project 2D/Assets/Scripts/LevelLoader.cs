@@ -15,6 +15,7 @@ public class LevelLoader : MonoBehaviour
                   //The scene number to load (in File->Build Settings)
                   //SceneManager.LoadScene ("Level_2");
                   levelChange = true;
+                  SceneManager.LoadScene ("YouWon");
               }
               else {
                   levelChange = false;
@@ -29,6 +30,7 @@ public class LevelLoader : MonoBehaviour
             SceneManager.LoadScene("GameOver");
             Debug.Log("He's done ya again");
         }
+        /*
         else {
             
             SceneManager.LoadScene ("YouWon");
@@ -36,6 +38,7 @@ public class LevelLoader : MonoBehaviour
             
             
         }
+        */
     }
     /*      
     void OnDestroy()
