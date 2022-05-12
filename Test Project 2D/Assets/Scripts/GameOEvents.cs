@@ -7,9 +7,9 @@ using UnityEngine.SceneManagement;
 public class GameOEvents : MonoBehaviour
 {
     // Start is called before the first frame update
-    public void ReplayGame()
+    public void MenuGame()
     {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("MainMenu");
     }
 
     // Update is called once per frame
@@ -20,6 +20,10 @@ public class GameOEvents : MonoBehaviour
 
     public void StartGame() 
     {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("Level_1");
+    }
+    public void nextLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name + 1);
     }
 }

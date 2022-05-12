@@ -8,6 +8,8 @@ public class scr_movement : MonoBehaviour
     // Start is called before the first frame update
     public float speed;
 
+    public bool changeLevel;
+
     
 
     private Rigidbody2D rb;
@@ -40,7 +42,7 @@ public class scr_movement : MonoBehaviour
         {
             transform.Translate(Input.GetAxis("Vertical") * speed * Time.deltaTime, 0f, 0f);
         }
-
+        changeLevel = LevelLoader.levelChange;
         
     }
     bool IsGrounded()
@@ -60,11 +62,25 @@ public class scr_movement : MonoBehaviour
         return ray.collider != null;
     }
     
+    void OnTriggerEnter2D(Collider2D other){
+              //other.name should equal the root of your Player object
+              if (other.name == "LevelEnd") {
+                  //The scene number to load (in File->Build Settings)
+                  //SceneManager.LoadScene ("Level_2");
+                  changeLevel = true;
+              }
+          }
     void OnBecameInvisible() {
         //Destroy(PlayerGameObject);
         //Application.Quit();
-        SceneManager.LoadScene("GameOver");
-        Debug.Log("He's done ya again");
+
+        if (changeLevel == false) {
+            SceneManager.LoadScene("GameOver");
+            Debug.Log("He's done ya again");
+        }
+        else {
+            SceneManager.LoadScene ("YouWon");
+        }
 
     }
     
