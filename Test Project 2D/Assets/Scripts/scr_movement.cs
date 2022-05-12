@@ -42,7 +42,7 @@ public class scr_movement : MonoBehaviour
         {
             transform.Translate(Input.GetAxis("Vertical") * speed * Time.deltaTime, 0f, 0f);
         }
-        changeLevel = LevelLoader.levelChange;
+        //changeLevel = LevelLoader.levelChange;
         
     }
     bool IsGrounded()
@@ -63,18 +63,6 @@ public class scr_movement : MonoBehaviour
     }
     
     
-    void OnBecameInvisible() {
-        //Destroy(PlayerGameObject);
-        //Application.Quit();
-
-        if (changeLevel == false) {
-            SceneManager.LoadScene("GameOver");
-            Debug.Log("He's done ya again");
-        }
-        else {
-            SceneManager.LoadScene ("YouWon");
-            
-        }
-    }
+    
     
 }
