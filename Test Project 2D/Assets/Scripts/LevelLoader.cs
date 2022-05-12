@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
 {
-    public bool levelChange;
+    private bool levelChange;
 
 
     // Start is called before the first frame update
@@ -30,7 +30,10 @@ public class LevelLoader : MonoBehaviour
             Debug.Log("He's done ya again");
         }
         else {
+            
             SceneManager.LoadScene ("YouWon");
+            levelChange = false;
+            
             
         }
     }
